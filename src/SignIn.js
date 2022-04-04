@@ -19,8 +19,9 @@ import {setEmailField, setPasswordField} from './actions'
 const mapStateToProps = state => {
   return{
     email: state.emailEnter.emailField,
-    password: state.passwordEnter.passwordField
-    }
+    password: state.passwordEnter.passwordField,
+    signIn: state.signInClick.signIn
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -45,7 +46,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-function App(props) {
+function SignIn(props) {
 
   useEffect(() => {
     console.log(props)
@@ -133,4 +134,4 @@ function App(props) {
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

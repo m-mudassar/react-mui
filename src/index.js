@@ -5,9 +5,9 @@ import { createStore } from 'redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {emailEnter} from './reducers'
+import rootReducer from './CombinedReducers'
 
-const store = createStore(emailEnter)
+const store = createStore(rootReducer)
 
 ReactDOM.render(
   <React.StrictMode>
